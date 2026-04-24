@@ -11,7 +11,7 @@
  * This can handle the same calls as defined in the SearchApiServiceInterface
  * and pass it on to the service implementation appropriate for this server.
  */
-class SearchApiServer extends Entity {
+class SearchApiServer extends EntityPlusCmiEntity {
 
   /* Database values that will be set when object is loaded: */
 

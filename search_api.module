@@ -388,18 +388,25 @@ function search_api_cron() {
 function search_api_entity_info() {
   $info['search_api_server'] = array(
     'label' => t('Search server'),
-    'controller class' => 'EntityPlusControllerExportable',
+    'controller class' => 'EntityPlusCmiController',
     'metadata controller class' => FALSE,
     'entity class' => 'SearchApiServer',
-    'base table' => 'search_api_server',
+    'views controller class' => FALSE,
     'uri callback' => 'search_api_server_url',
     'access callback' => 'search_api_entity_access',
     'module' => 'search_api',
     'exportable' => TRUE,
+    'configuration' => TRUE,
     'entity keys' => array(
       'id' => 'id',
       'label' => 'name',
       'name' => 'machine_name',
+      'module' => 'module',
+    ),
+    'admin ui' => array(
+      'path' => 'admin/config/search/search_api/add_server',
+      'file' => 'search_api.admin.inc',
+      'controller class' => 'EntityPlusCmiUIController',
     ),
   );
   $info['search_api_index'] = array(
@@ -407,15 +414,23 @@ function search_api_entity_info() {
     'controller class' => 'EntityPlusControllerExportable',
     'metadata controller class' => FALSE,
     'entity class' => 'SearchApiIndex',
-    'base table' => 'search_api_index',
+    'views controller class' => FALSE,
+    //'base table' => 'search_api_index',
     'uri callback' => 'search_api_index_url',
     'access callback' => 'search_api_entity_access',
     'module' => 'search_api',
     'exportable' => TRUE,
+    'configuration' => TRUE,
     'entity keys' => array(
       'id' => 'id',
       'label' => 'name',
       'name' => 'machine_name',
+      'module' => 'module',
+    ),
+    'admin ui' => array(
+      'path' => 'admin/config/search/search_api/add_index',
+      'file' => 'search_api.admin.inc',
+      'controller class' => 'EntityPlusCmiUIController',
     ),
   );
 

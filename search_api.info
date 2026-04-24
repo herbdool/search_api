@@ -6,5 +6,6 @@ package = Search
 tags[] = Utility
 
 dependencies[] = entity_plus (>=1.x-1.0.10)
+dependencies[] = entity_plus_cmi
 
 configure = admin/config/search/search_api

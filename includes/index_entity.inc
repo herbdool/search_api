@@ -8,7 +8,7 @@
 /**
  * Class representing a search index.
  */
-class SearchApiIndex extends Entity {
+class SearchApiIndex extends EntityPlusCmiEntity {
 
   // Cache values, set when the corresponding methods are called for the first
   // time.
